@@ -14,3 +14,10 @@ React component for upload video to your vimeo account
 
 [coveralls-badge]: https://img.shields.io/coveralls/ArvinH/react-vimeouploadr/master.png?style=flat-square
 [coveralls]: https://coveralls.io/github/ArvinH/react-vimeouploadr
+
+## Demo
+![demo](http://g.recordit.co/lG2JE1ZXiY.gif)
+
+## To-Do
+- [ ] export final vimeo video link instead of render player directly
+- [ ] fix test
