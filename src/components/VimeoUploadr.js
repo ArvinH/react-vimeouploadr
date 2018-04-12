@@ -37,7 +37,8 @@ const DropzoneStyle = {
   borderStyle: 'dashed',
   borderRadius: '5px',
   margin: '0 auto',
-  position: 'relative'
+  position: 'relative',
+  overflow: 'hidden'
 };
 
 const UplaodingMask = styled.div.attrs({
@@ -49,7 +50,7 @@ const UplaodingMask = styled.div.attrs({
   width: 100%;
   height: 100%;
   padding-top: 50%;
-  background-color: rgba(0,0, 0, 0.6);;
+  background-color: rgba(0,0, 0, 0.6);
 `;
 
 const UplaodFailedMessage = styled.div`
@@ -73,6 +74,14 @@ const ProgressBar = styled.div`
   border-radius: 10px;
   background-color: green;
   transition: all 0.5s;
+`;
+
+const VideoComponent = styled.video`
+  display: inline-block;
+  width: 50%;
+  max-height: 600px;
+  box-sizing: border-box;
+  vertical-align: middle;
 `;
 
 class VideoUploader extends Component {
@@ -130,7 +139,7 @@ class VideoUploader extends Component {
         }
         {
           uploadSuccess &&
-          <video src={vimeoLink} />
+          <VideoComponent src={vimeoLink} controls />
         }
       </VideoUploaderWrapper>
     );
