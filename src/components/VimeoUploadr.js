@@ -80,16 +80,7 @@ class VideoUploader extends Component {
     super(props);
     this.state = {
       accepted: [],
-      rejected: [],
-      imgurImageLinkFromState: null
-    }
-  }
-
-  componentWillReceiveProps(nextProps) {
-    if (nextProps.imgurImageLink !== this.props.imgurImageLink) {
-      this.setState({
-        imgurImageLinkFromState: nextProps.imgurImageLink
-      });
+      rejected: []
     }
   }
 
@@ -113,7 +104,6 @@ class VideoUploader extends Component {
       uploadStatus,
       progress
     } = this.props;
-    const { imgurImageLinkFromState } = this.state;
     const uploadSuccess = uploadStatus === 'success';
     const uploadFailed = uploadStatus === 'failed';
     return (
@@ -132,7 +122,7 @@ class VideoUploader extends Component {
           <p>Try dropping some files here, or click to select files to upload.</p>
           {
             this.state.accepted.map(f =>
-              <VideoUploaderWrapper key={f.name} src={f.preview || imgurImageLinkFromState} />
+              <VideoUploaderWrapper key={f.name} src={f.preview} />
             )
           }
           {uploading && <UplaodingMask><div /><div /><div /></UplaodingMask>}
