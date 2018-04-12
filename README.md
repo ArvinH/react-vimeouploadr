@@ -19,5 +19,6 @@ React component for upload video to your vimeo account
 ![demo](http://g.recordit.co/lG2JE1ZXiY.gif)
 
 ## To-Do
+- [ ] Pass api host from config or client side accesstoken?
 - [ ] export final vimeo video link instead of render player directly
 - [ ] fix test
