@@ -18,7 +18,16 @@
     "test:coverage": "nwb test-react --coverage",
     "test:watch": "nwb test-react --server"
   },
-  "dependencies": {},
+  "dependencies": {
+    "axios": "^0.18.0",
+    "loaders.css": "^0.1.2",
+    "react-dropzone": "^4.2.9",
+    "react-loading": "^1.0.4",
+    "react-redux": "^5.0.7",
+    "redux": "^3.7.2",
+    "redux-thunk": "^2.2.0",
+    "styled-components": "^3.2.5"
+  },
   "peerDependencies": {
     "react": "16.x"
   },

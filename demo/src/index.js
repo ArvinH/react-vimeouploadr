@@ -1,15 +1,14 @@
-import React, {Component} from 'react'
-import {render} from 'react-dom'
+import React from 'react';
+import { render } from 'react-dom';
+import { Provider } from 'react-redux';
+import store from './store';
+import App from './app';
 
-import Example from '../../src'
+const target = document.querySelector('#demo')
 
-class Demo extends Component {
-  render() {
-    return <div>
-      <h1>react-vimeouploadr Demo</h1>
-      <Example/>
-    </div>
-  }
-}
-
-render(<Demo/>, document.querySelector('#demo'))
+render(
+  <Provider store={store}>
+    <App />
+  </Provider>,
+  target
+)

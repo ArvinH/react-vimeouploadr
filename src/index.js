@@ -1,9 +1,7 @@
-import React, {Component} from 'react'
+import VimeoUploadr from './components/VimeoUploadr';
+import vimeoUpload from './reducers/vimeoUpload';
 
-export default class extends Component {
-  render() {
-    return <div>
-      <h2>Welcome to React components</h2>
-    </div>
-  }
-}
+export {
+  vimeoUpload
+};
+export default VimeoUploadr;
