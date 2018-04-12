@@ -4,7 +4,7 @@
 [![npm package][npm-badge]][npm]
 [![Coveralls][coveralls-badge]][coveralls]
 
-Describe react-vimeouploadr here.
+React component for upload video to your vimeo account
 
 [build-badge]: https://img.shields.io/travis/ArvinH/react-vimeouploadr/master.png?style=flat-square
 [build]: https://travis-ci.org/ArvinH/react-vimeouploadr
