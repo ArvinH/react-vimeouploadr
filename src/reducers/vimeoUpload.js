@@ -51,9 +51,6 @@ export const uploadVimeo = (postBody) => {
     const success = async (videoUri, videoData, size, uploadLink, result) => {
       const apiResult = result.data;
       // check if upload success
-
-
-      console.log('check upload status');
       const checkUploadResult = await axios.head(uploadLink, {
         headers: {
           'Tus-Resumable': '1.0.0'
@@ -62,9 +59,6 @@ export const uploadVimeo = (postBody) => {
 
       const uploadLength = get(checkUploadResult, ['headers', 'upload-length']);
       const uploadOffset = get(checkUploadResult, ['headers', 'upload-offset']);
-      // To-Do
-      console.log('check upload status result uploadLength', uploadLength);
-      console.log('check upload status result uploadOffset', uploadOffset);
       if (uploadLength === uploadOffset) {
         // complete upload
         const getVideoExternalLInk = await axios.get(`http://localhost:5000/video/vimeo${videoUri}`);

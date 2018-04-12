@@ -120,11 +120,6 @@ class VideoUploader extends Component {
           disabled={uploading}
         >
           <p>Try dropping some files here, or click to select files to upload.</p>
-          {
-            this.state.accepted.map(f =>
-              <VideoUploaderWrapper key={f.name} src={f.preview} />
-            )
-          }
           {uploading && <UplaodingMask><div /><div /><div /></UplaodingMask>}
         </Dropzone>
         {
