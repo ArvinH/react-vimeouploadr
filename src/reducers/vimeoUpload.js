@@ -46,7 +46,11 @@ export default (state = initialState, action) => {
 };
 
 // actions
-export const uploadVimeo = (postBody) => {
+export const uploadVimeo = ({
+  createVideoLink,
+  getVideoLink,
+  ...postBody
+}) => {
   return async dispatch => {
     const success = async (videoUri, videoData, size, uploadLink, result) => {
       const apiResult = result.data;
@@ -61,8 +65,7 @@ export const uploadVimeo = (postBody) => {
       const uploadOffset = get(checkUploadResult, ['headers', 'upload-offset']);
       if (uploadLength === uploadOffset) {
         // complete upload
-        const getVideoExternalLInk = await axios.get(`http://localhost:5000/video/vimeo${videoUri}`);
-        console.log('getVideoExternalLInk', getVideoExternalLInk.data.data);
+        const getVideoExternalLInk = await axios.get(`${getVideoLink}${videoUri}`);
         dispatch({
           type: POST_VIMEO_SUCCESS,
           payload: {
@@ -128,7 +131,7 @@ export const uploadVimeo = (postBody) => {
       } = postBody;
 
       // get upload link
-      const createVideoAPIResult = await axios.post('http://localhost:5000/video/vimeo', {
+      const createVideoAPIResult = await axios.post(createVideoLink, {
         "upload": {
           "approach": "tus",
           "size": size

@@ -22,7 +22,10 @@ class DemoApp extends Component {
     const uploadSuccess = uploadStatus === 'success';
     return (
       <div>
-        <VimeoUploadr />
+        <VimeoUploadr
+          createVideoLink="http://localhost:5000/video/vimeo"
+          getVideoLink="http://localhost:5000/video/vimeo"
+        />
         {uploadSuccess && <VideoComponent src={vimeoLink} controls />}
       </div>
     );

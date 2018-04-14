@@ -77,11 +77,14 @@ class VideoUploader extends Component {
   }
 
   onDrop = (accepted, rejected) => {
+    const { createVideoLink, getVideoLink } = this.props;
     this.setState({
       accepted
     });
     const file = accepted.find(f => f)
     this.props.uploadVimeo({
+      createVideoLink,
+      getVideoLink,
       videoData: file,
       size: file.size
     });
