@@ -20,15 +20,6 @@ const VideoUploaderWrapper = styled.div`
   position: relative;
 `;
 
-const VideoPreviewComponent = styled.video`
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-`;
-
 const DropzoneStyle = {
   width: '200px',
   height: '200px',
@@ -76,14 +67,6 @@ const ProgressBar = styled.div`
   transition: all 0.5s;
 `;
 
-const VideoComponent = styled.video`
-  display: inline-block;
-  width: 50%;
-  max-height: 600px;
-  box-sizing: border-box;
-  vertical-align: middle;
-`;
-
 class VideoUploader extends Component {
   constructor(props) {
     super(props);
@@ -108,7 +91,6 @@ class VideoUploader extends Component {
     const {
       VideoUploaderWrapperStyle,
       CustomDropzoneStyle,
-      vimeoLink = '#',
       uploading,
       uploadStatus,
       progress
@@ -137,17 +119,12 @@ class VideoUploader extends Component {
             <ProgressBar progress={progress} uploadStatus={uploadStatus} />
           </ProgressBarWrapper>
         }
-        {
-          uploadSuccess &&
-          <VideoComponent src={vimeoLink} controls />
-        }
       </VideoUploaderWrapper>
     );
   }
 }
 
 const mapStateToProps = state => ({
-  vimeoLink: state.vimeoUpload.vimeoLink,
   uploading: state.vimeoUpload.uploading,
   uploadStatus: state.vimeoUpload.uploadStatus,
   progress: state.vimeoUpload.progress
