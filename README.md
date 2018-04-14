@@ -23,13 +23,12 @@ React component for upload video to your vimeo account
 ### Steps
 
 1. Create vimeo app and get the access token (you may need to wait for couple days to get the upload permission)
-
-  [vimeo app register](https://developer.vimeo.com/apps)
-  [vimeo upload api doc](https://developer.vimeo.com/api/upload/videos)
+    [vimeo app register](https://developer.vimeo.com/apps)
+    
+    [vimeo upload api doc](https://developer.vimeo.com/api/upload/videos)
 
 2. You have to prepare a server for requesting vimeo api, you can do this in client side (Well, technically, you can do it on client-side but it will expose your access token to the world and that's not we want to see). Here is the server side sample code:
-
-  [Flask server sample code](https://gist.github.com/ArvinH/42ad574cd8caf6ccd55afa7e2ad9c43a)
+    [Flask server sample code](https://gist.github.com/ArvinH/42ad574cd8caf6ccd55afa7e2ad9c43a)
 
 3. Mount component and reducer to your app (Check the `app.js` and `store.js` in `demo/src` foldr)
   
