@@ -1,16 +1,16 @@
-import axios from "axios";
-import get from "lodash/get";
+import axios from 'axios';
+import get from 'lodash/get';
 // action types
-export const POST_VIMEO_START = "vimeo/POST_VIMEO_START";
-export const POST_VIMEO_SUCCESS = "vimeo/POST_VIMEO_SUCCESS";
-export const POST_VIMEO_FAILED = "vimeo/POST_VIMEO_FAILED";
-export const POST_VIMEO_PROGRESS = "vimeo/POST_VIMEO_PROGRESS";
+export const POST_VIMEO_START = 'vimeo/POST_VIMEO_START';
+export const POST_VIMEO_SUCCESS = 'vimeo/POST_VIMEO_SUCCESS';
+export const POST_VIMEO_FAILED = 'vimeo/POST_VIMEO_FAILED';
+export const POST_VIMEO_PROGRESS = 'vimeo/POST_VIMEO_PROGRESS';
 
 // initial state
 const initialState = {
   vimeoLink: undefined,
   uploading: false,
-  uploadStatus: ""
+  uploadStatus: ''
 };
 
 // reducer
@@ -53,12 +53,12 @@ export const uploadVimeo = ({ createVideoLink, getVideoLink, ...postBody }) => {
       // check if upload success
       const checkUploadResult = await axios.head(uploadLink, {
         headers: {
-          "Tus-Resumable": "1.0.0"
+          'Tus-Resumable': '1.0.0'
         }
       });
 
-      const uploadLength = get(checkUploadResult, ["headers", "upload-length"]);
-      const uploadOffset = get(checkUploadResult, ["headers", "upload-offset"]);
+      const uploadLength = get(checkUploadResult, ['headers', 'upload-length']);
+      const uploadOffset = get(checkUploadResult, ['headers', 'upload-offset']);
       if (uploadLength === uploadOffset) {
         // complete upload
         const getVideoExternalLInk = await axios.get(
@@ -69,13 +69,13 @@ export const uploadVimeo = ({ createVideoLink, getVideoLink, ...postBody }) => {
           payload: {
             vimeoLink: getVideoExternalLInk.data.data,
             uploading: false,
-            uploadStatus: "success"
+            uploadStatus: 'success'
           }
         });
         return apiResult;
       } else {
         // upload failed, resume upload?
-        console.log("should resume upload");
+        console.log('should resume upload');
         return patchVimeoFunc(
           videoUri,
           uploadLink,
@@ -90,7 +90,7 @@ export const uploadVimeo = ({ createVideoLink, getVideoLink, ...postBody }) => {
         type: POST_VIMEO_FAILED,
         payload: {
           uploading: false,
-          uploadStatus: "failed"
+          uploadStatus: 'failed'
         }
       });
       return null;
@@ -105,9 +105,9 @@ export const uploadVimeo = ({ createVideoLink, getVideoLink, ...postBody }) => {
     ) => {
       const result = await axios.patch(uploadLink, videoData, {
         headers: {
-          "Tus-Resumable": "1.0.0",
-          "Upload-Offset": uploadOffset || "0",
-          "Content-Type": "application/offset+octet-stream"
+          'Tus-Resumable': '1.0.0',
+          'Upload-Offset': uploadOffset || '0',
+          'Content-Type': 'application/offset+octet-stream'
         },
         onUploadProgress: function(progressEvent) {
           const total = progressEvent.total || size;
@@ -137,12 +137,12 @@ export const uploadVimeo = ({ createVideoLink, getVideoLink, ...postBody }) => {
       // get upload link
       const createVideoAPIResult = await axios.post(createVideoLink, {
         upload: {
-          approach: "tus",
+          approach: 'tus',
           size: size
         }
       });
       const createVideoResult = createVideoAPIResult.data;
-      if (createVideoResult.status !== "success") {
+      if (createVideoResult.status !== 'success') {
         return failed();
       }
       const uploadLink = createVideoResult.uploadLink;

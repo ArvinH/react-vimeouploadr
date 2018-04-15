@@ -1,12 +1,12 @@
-import React, { Component } from "react";
-import { bindActionCreators } from "redux";
-import { connect } from "react-redux";
-import styled from "styled-components";
-import Dropzone from "react-dropzone";
+import React, { Component } from 'react';
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
+import styled from 'styled-components';
+import Dropzone from 'react-dropzone';
 
-import { uploadVimeo } from "../reducers/vimeoUpload";
+import { uploadVimeo } from '../reducers/vimeoUpload';
 
-import "loaders.css/loaders.min.css";
+import 'loaders.css/loaders.min.css';
 
 const VideoUploaderWrapper = styled.div`
   width: 100%;
@@ -19,19 +19,19 @@ const VideoUploaderWrapper = styled.div`
 `;
 
 const DropzoneStyle = {
-  width: "200px",
-  height: "200px",
-  borderWidth: "2px",
-  borderColor: "rgb(102, 102, 102)",
-  borderStyle: "dashed",
-  borderRadius: "5px",
-  margin: "0 auto",
-  position: "relative",
-  overflow: "hidden"
+  width: '200px',
+  height: '200px',
+  borderWidth: '2px',
+  borderColor: 'rgb(102, 102, 102)',
+  borderStyle: 'dashed',
+  borderRadius: '5px',
+  margin: '0 auto',
+  position: 'relative',
+  overflow: 'hidden'
 };
 
 const UplaodingMask = styled.div.attrs({
-  className: "loader-inner ball-pulse"
+  className: 'loader-inner ball-pulse'
 })`
   position: absolute;
   top: 0;
@@ -53,7 +53,7 @@ const ProgressBarWrapper = styled.div`
 
 const ProgressBar = styled.div`
   width: ${props => {
-    if (props.uploadStatus === "success") {
+    if (props.uploadStatus === 'success') {
       return 100;
     } else {
       return props.progress || 3;
@@ -96,8 +96,8 @@ class VideoUploader extends Component {
       uploadStatus,
       progress
     } = this.props;
-    const uploadSuccess = uploadStatus === "success";
-    const uploadFailed = uploadStatus === "failed";
+    const uploadSuccess = uploadStatus === 'success';
+    const uploadFailed = uploadStatus === 'failed';
     return (
       <VideoUploaderWrapper
         className="VideoUploaderWrapper"
@@ -150,7 +150,6 @@ const mapDispatchToProps = dispatch =>
     },
     dispatch
   );
-
 VideoUploader = connect(mapStateToProps, mapDispatchToProps)(VideoUploader);
 
 export default VideoUploader;
