@@ -1,10 +1,7 @@
 # react-vimeouploadr
 
 [![Travis][travis-badge]][travis]
-[![Codecov Status][codecov-badge]][codecov]
-
-<!-- [![Github Tag][githubtag-badge]][githubtag] -->
-
+[![Codecov Status][codecov-badge]][codecov]<!-- [![Github Tag][githubtag-badge]][githubtag] -->
 [![Dependency Status][dependency-badge]][dependency]
 [![devDependency Status][devdependency-badge]][devdependency]
 [![peerDependency Status][peerdependency-badge]][peerdependency]
