@@ -3,7 +3,6 @@
 [![Travis][travis-badge]][travis]
 [![Codecov Status][codecov-badge]][codecov]
 [![Github Tag][githubtag-badge]][githubtag]
-[![node][node]]()
 
 [![Dependency Status][dependency-badge]][dependency]
 [![devDependency Status][devdependency-badge]][devdependency]
@@ -80,7 +79,6 @@ React component for upload video to your vimeo account
 [travis]: https://travis-ci.org/ArvinH/react-vimeouploadr
 [codecov-badge]: https://img.shields.io/codecov/c/github/ArvinH/react-vimeouploadr.svg?style=flat-square
 [codecov]: https://codecov.io/github/ArvinH/react-vimeouploadr?branch=master
-[node]: https://img.shields.io/node/v/react-vimeouploadr.svg?style=flat-square
 [npm-badge]: https://img.shields.io/npm/v/react-vimeouploadr.svg?style=flat-square
 [npm]: https://www.npmjs.com/package/react-vimeouploadr
 [npm-downloads]: https://img.shields.io/npm/dt/react-vimeouploadr.svg?style=flat-square
