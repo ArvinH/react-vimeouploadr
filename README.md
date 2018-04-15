@@ -91,6 +91,6 @@ React component for upload video to your vimeo account
 [githubtag-badge]: https://img.shields.io/github/tag/ArvinH/react-vimeouploadr.svg?style=flat-square
 [githubtag]: ./CHANGELOG.md
 [license-badge]: https://img.shields.io/github/license/ArvinH/react-vimeouploadr.svg?style=flat-square
-[license]: http://michaelhsu.mit-license.org/
+[license]: http://arvinh.mit-license.org/
 [prettier-badge]: https://img.shields.io/badge/styled_with-prettier-ff69b4.svg?style=flat-square
 [prettier]: https://github.com/prettier/prettier
