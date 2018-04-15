@@ -2,7 +2,8 @@
 
 [![Travis][travis-badge]][travis]
 [![Codecov Status][codecov-badge]][codecov]
-[![Github Tag][githubtag-badge]][githubtag]
+
+<!-- [![Github Tag][githubtag-badge]][githubtag] -->
 
 [![Dependency Status][dependency-badge]][dependency]
 [![devDependency Status][devdependency-badge]][devdependency]
