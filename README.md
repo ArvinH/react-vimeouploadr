@@ -31,7 +31,7 @@ React component for upload video to your vimeo account
     ### component
 
     ```js
-    import VimeoUploadr from 'react-vimeouploadr';
+    import VimeoUploadr from 'react-vimeouploadr/lib';
     // pass your server host for create video and get video link api (see the servier side code sample)
     <VimeoUploadr
       createVideoLink="http://localhost:5000/video/vimeo"
@@ -42,7 +42,7 @@ React component for upload video to your vimeo account
     ### reducer
 
     ```js
-    import { vimeoUpload } from 'react-vimeouploadr';
+    import { vimeoUpload } from 'react-vimeouploadr/lib';
     // add reducer to your store
     export default createStore(
       combineReducers({
