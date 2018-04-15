@@ -75,3 +75,24 @@ React component for upload video to your vimeo account
 * [x] Doc for api on server side
 * [ ] Doc for style configuration
 * [ ] Fix test
+
+[travis-badge]: https://img.shields.io/travis/ArvinH/react-vimeouploadr/master.svg?style=flat-square
+[travis]: https://travis-ci.org/ArvinH/react-vimeouploadr
+[codecov-badge]: https://img.shields.io/codecov/c/github/ArvinH/react-vimeouploadr.svg?style=flat-square
+[codecov]: https://codecov.io/github/ArvinH/react-vimeouploadr?branch=master
+[node]: https://img.shields.io/node/v/react-vimeouploadr.svg?style=flat-square
+[npm-badge]: https://img.shields.io/npm/v/react-vimeouploadr.svg?style=flat-square
+[npm]: https://www.npmjs.com/package/react-vimeouploadr
+[npm-downloads]: https://img.shields.io/npm/dt/react-vimeouploadr.svg?style=flat-square
+[dependency-badge]: https://david-dm.org/ArvinH/react-vimeouploadr.svg?style=flat-square
+[dependency]: https://david-dm.org/ArvinH/react-vimeouploadr
+[devdependency-badge]: https://david-dm.org/ArvinH/react-vimeouploadr/dev-status.svg?style=flat-square
+[devdependency]: https://david-dm.org/ArvinH/react-vimeouploadr#info=devDependencies
+[peerdependency-badge]: https://david-dm.org/ArvinH/react-vimeouploadr/peer-status.svg?style=flat-square
+[peerdependency]: https://david-dm.org/ArvinH/react-vimeouploadr#info=peerDependencies
+[githubtag-badge]: https://img.shields.io/github/tag/ArvinH/react-vimeouploadr.svg?style=flat-square
+[githubtag]: ./CHANGELOG.md
+[license-badge]: https://img.shields.io/github/license/ArvinH/react-vimeouploadr.svg?style=flat-square
+[license]: http://michaelhsu.mit-license.org/
+[prettier-badge]: https://img.shields.io/badge/styled_with-prettier-ff69b4.svg?style=flat-square
+[prettier]: https://github.com/prettier/prettier
