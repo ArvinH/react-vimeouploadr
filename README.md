@@ -70,7 +70,7 @@ React component for upload video to your vimeo account
 * [x] Pass api host from config
 * [x] Export final vimeo video link instead of render player directly
 * [x] Doc for api on server side
-* [ ] Doc for style configuration
+* [ ] Integrate with Storybook
 * [ ] Fix test
 
 [travis-badge]: https://img.shields.io/travis/ArvinH/react-vimeouploadr/master.svg?style=flat-square
