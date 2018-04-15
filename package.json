@@ -4,19 +4,15 @@
   "description": "react-vimeouploadr React component",
   "main": "lib/index.js",
   "module": "es/index.js",
-  "files": [
-    "css",
-    "es",
-    "lib",
-    "umd"
-  ],
+  "files": ["css", "es", "lib", "umd"],
   "scripts": {
     "build": "nwb build-react-component",
     "clean": "nwb clean-module && nwb clean-demo",
     "start": "nwb serve-react-demo",
     "test": "nwb test-react",
     "test:coverage": "nwb test-react --coverage",
-    "test:watch": "nwb test-react --server"
+    "test:watch": "nwb test-react --server",
+    "precommit": "lint-staged"
   },
   "dependencies": {
     "axios": "^0.18.0",
@@ -46,11 +42,13 @@
     "react-dom": "^16.3.1",
     "redux-test-utils": "^0.2.2"
   },
-  "author": "",
+  "pre-commit": ["precommit"],
+  "lint-staged": {
+    "*.{js,json,css,md}": ["prettier --write", "git add"]
+  },
+  "author": "ArvinH",
   "homepage": "",
   "license": "MIT",
-  "repository": "",
-  "keywords": [
-    "react-component"
-  ]
+  "repository": "https://github.com/ArvinH/react-vimeouploadr",
+  "keywords": ["react-component"]
 }
