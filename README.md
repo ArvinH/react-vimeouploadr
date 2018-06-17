@@ -10,6 +10,8 @@
 
 React component for upload video to your vimeo account
 
+This component extracted by another side-projects built with my friend, I extracted this component out because I found there are few sample code on internet about vimeo api with react/redux, so this project could be a reference for those who want to use vimeo api with react/redux.
+
 ## Demo
 
 ![demo](http://g.recordit.co/lG2JE1ZXiY.gif)
